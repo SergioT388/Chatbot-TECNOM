@@ -20,7 +20,7 @@ def configurar_modelo(cliente, modelo, mensajeDeEntrada):
     return cliente.chat.completions.create(
         model=modelo,  # Selecciona el modelo de la IA
         messages=[{"role": "user", "content": mensajeDeEntrada}],
-        stream=False  # Funcionalidad para que la IA responda a tiempo real
+        stream=True  # Funcionalidad para que la IA responda a tiempo real
     )
 
 
@@ -88,4 +88,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # Para ejecutar: python -m streamlit run PROYECTO.py
+    # Para ejecutar: python -m streamlit run app.py
