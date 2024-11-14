@@ -72,7 +72,7 @@ def main():
     clienteUsuario = crear_usuario_groq()  # Conecta con la API GROQ
     inicializar_estado()  # Crea en memoria historial vacío
     area_chat()  # Crea el contenedor de mensaje
-    mensaje = st.text_input("Escribí un mensaje...")
+    mensaje = st.chat_input("Escribí un mensaje...")
 
     if mensaje:
         actualizar_historial("user", mensaje, "🙋‍♂️")
